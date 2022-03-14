@@ -338,6 +338,21 @@ class BrowserRobot {
         findInPageQuery.check(matches(not(isDisplayed())))
     }
 
+    fun verifyCookiesEnabled(areCookiesEnabled: String) {
+        assertTrue(
+            mDevice.wait(
+                Until
+                    .hasObject(
+                        By.res("detected_value")
+                            .hasDescendant(
+                                By.textContains(areCookiesEnabled)
+                            )
+                    ),
+                waitingTime
+            )
+        )
+    }
+
     class Transition {
         fun openSearchBar(interact: SearchRobot.() -> Unit): SearchRobot.Transition {
             browserURLbar.waitForExists(waitingTime)
