@@ -17,6 +17,8 @@ import mozilla.components.feature.session.FullScreenFeature
 import mozilla.components.feature.session.SessionUseCases
 import mozilla.components.support.base.feature.LifecycleAwareFeature
 import mozilla.components.support.base.feature.UserInteractionHandler
+import mozilla.components.support.ktx.android.view.enterToImmersiveMode
+import mozilla.components.support.ktx.android.view.exitImmersiveMode
 import org.mozilla.focus.ext.disableDynamicBehavior
 import org.mozilla.focus.ext.enableDynamicBehavior
 import org.mozilla.focus.ext.hide
@@ -66,7 +68,7 @@ class FullScreenIntegration(
             statusBar.visibility = View.VISIBLE
             exitBrowserFullscreen()
 
-            exitImmersiveModeIfNeeded()
+            exitImmersiveMode()
         }
     }
 
@@ -87,32 +89,14 @@ class FullScreenIntegration(
      */
     @VisibleForTesting
     internal fun switchToImmersiveMode() {
-        val window = activity.window
-        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
-        @Suppress("DEPRECATION") // https://github.com/mozilla-mobile/focus-android/issues/5016
-        window.decorView.systemUiVisibility = (
-            View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                or View.SYSTEM_UI_FLAG_FULLSCREEN
-                or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-            )
+        activity.enterToImmersiveMode()
     }
 
     /**
      * Show the system bars again.
      */
-    fun exitImmersiveModeIfNeeded() {
-        if (WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON and activity.window.attributes.flags == 0) {
-            // We left immersive mode already.
-            return
-        }
-
-        val window = activity.window
-        window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
-        @Suppress("DEPRECATION") // https://github.com/mozilla-mobile/focus-android/issues/5016
-        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+    fun exitImmersiveMode() {
+        activity.exitImmersiveMode()
     }
 
     @VisibleForTesting
