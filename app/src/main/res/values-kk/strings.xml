@@ -296,8 +296,11 @@
     <string name="preference_security_biometric">Қолданбаны босату үшін саусақ баспасын қолдану</string>
     <!-- Preference Summary: Biometrics (iris scan, fingerprint, or facial scan) can be used to unlock Focus if the app had a URL
         open when the app was last run to ensure that only the phone's owner can view a previous session.
-        %1$s will be replaced by the app name (e.g. Firefox Focus) -->
-    <string name="preference_security_biometric_summary">Сіздің саусақ баспаңыз URL сілтемеде ашық болған кезде %1$s босата алады. Тыңшы іске қосылатын болады.</string>
+        %s will be replaced by the app name (e.g. Firefox Focus)
+        Shortcuts is a feature that allows the user to pin his favorite websites to Focus home screen so he can quickly access them-->
+    <string moz:removedIn="102" name="preference_security_biometric_summary" tools:ignore="UnusedResources">Сіздің саусақ баспаңыз URL сілтемеде ашық болған кезде %1$s босата алады. Тыңшы іске қосылатын болады.</string>
+
+    <string name="preference_security_biometric_summary2">Жарлықтарды қосқан болсаңыз немесе веб-сайт %s ішінде қазір ашық болса, саусақ ізі арқылы құлыпты ашыңыз.</string>
 
     <!-- Preference Title: Secure Mode is a setting that prevents the app's content to show up in the "recent apps" screen
          and prevents the user from taking screenshots or casting the app to other displays. -->
@@ -496,6 +499,30 @@
     <!-- Onboarding: Description -->
     <string name="onboarding_description">Қажет кезде келесі деңгейлі жекелік шолу</string>
 
+    <!-- Onboarding: Incognito Title -->
+    <string name="onboarding_incognito_title">Инкогнито мен жасырын режимдер біріккенде</string>
+
+    <!-- Onboarding: Incognito Description -->
+    <!-- Text %s will be replaced with the name of the app (e.g. Focus, Klar) -->
+    <string name="onboarding_incognito_description">%s - жекелікті алға қоятын браузер, оның бақылаудан және cookie файлдарынан өте мықты қорғанысы бар.</string>
+
+    <!-- Onboarding: History Title -->
+    <string name="onboarding_history_title">Интернетті көрінбейтіндей шолыңыз</string>
+
+    <!-- Onboarding: History Description -->
+    <string moz:removedIn="100" name="onboarding_history_description" tools:ignore="UnusedResources">Бір шерту сіздің шолу тарихын және cookie файлдарын өшіреді — және жарнамаға сіздің соңыныздан еруден жол бермейді.</string>
+
+    <string name="onboarding_history_description2">Бір шерту сіздің шолу тарихын және cookie файлдарын өшіреді — және жарнамаға сіздің соңыныздан еруден жол бермейді.</string>
+
+    <!-- Onboarding: Protection Title -->
+    <string name="onboarding_protection_title">Кез келген жағдайға сәйкес келетін жекелік</string>
+
+    <!-- Onboarding: Protection Description -->
+    <string name="onboarding_protection_description">Шолуды өзгерту қажет болса, жекелік баптауларын арттыру немесе кішірейту оңай.</string>
+
+    <!-- Onboarding: Start browsing -->
+    <string name="onboarding_start_browsing">Шолуды бастау</string>
+
     <!-- First run tour (Default browser): Title -->
     <string name="firstrun_defaultbrowser_title">Жекелігіңізді күшейтіңіз</string>
     <!-- First run tour (Default browser): Text. -->
@@ -650,6 +677,48 @@
     <!-- Preference for autoplay -->
     <string name="preference_autoplay">Автоойнату</string>
 
+    <!-- Heading for the instructions to allow a permission -->
+    <string name="phone_feature_blocked_intro">Рұқсат ету үшін:</string>
+
+    <!-- First step for the allowing a permission -->
+    <string name="phone_feature_blocked_step_settings">1. Android баптауларына өтіңіз</string>
+
+    <!-- Second step for the allowing a permission -->
+    <string name="phone_feature_blocked_step_permissions"><![CDATA[2. <b>Рұқсаттар</b> басыңыз]]></string>
+
+    <!-- Button label that take the user to the Android App setting -->
+    <string name="phone_feature_go_to_settings">Баптауларға өтіңіз</string>
+
+    <!-- Third step for allowing a permission. The placeholder will be updated by, for example, "Camera" -->
+    <string name="phone_feature_blocked_step_feature"><![CDATA[3. <b>%1$s</b> ауыстырғышын іске қосыңыз]]></string>
+
+    <!-- Preference for altering the camera access for all websites -->
+    <string name="preference_phone_feature_camera">Камера</string>
+
+    <!-- Preference for altering the microphone access for all websites -->
+    <string name="preference_phone_feature_microphone">Микрофон</string>
+
+    <!-- Preference for altering the location access for all websites -->
+    <string name="preference_phone_feature_location">Орналасу</string>
+
+    <!-- Preference for altering the notification access for all websites -->
+    <string name="preference_phone_feature_notification">Ескерту</string>
+
+    <!-- Preference for altering the EME access for all websites -->
+    <string name="preference_phone_feature_media_key_system_access">DRM-мен басқарылатын құрама</string>
+
+    <!-- Label that indicates that a permission must be asked always -->
+    <string name="preference_option_phone_feature_ask_to_allow">Рұқсат ету үшін сұрау</string>
+
+    <!-- Label that indicates that a permission must be blocked -->
+    <string name="preference_option_phone_feature_blocked">Бұғатталған</string>
+
+    <!-- Label that indicates that a permission must be allowed -->
+    <string name="preference_option_phone_feature_allowed">Рұқсат етілген</string>
+
+    <!--Label that indicates a permission is by the Android OS-->
+    <string name="phone_feature_blocked_by_android">Android бұғаттаған</string>
+
     <!-- Preference for allow autoplay audio and video-->
     <string name="preference_allow_audio_video_autoplay">Аудио мен видеоны рұқсат ету</string>
 
@@ -688,14 +757,23 @@
 
     <!-- Title for the fingerprint authentication dialog box that is shown to the user when opening the app.
      %1$s is replaced with the app name -->
-    <string name="biometric_auth_title">%1$s босату</string>
+    <string moz:removedIn="103" name="biometric_auth_title">%1$s босату</string>
+
+    <!-- Text Button for show biometric prompt -->
+    <string name="show_biometric_button_text">Босату</string>
+
+    <!-- Title text for biometric prompt pop-up -->
+    <string name="biometric_prompt_title">Саусақ ізін пайдаланап растаңыз</string>
+
+    <!-- Subtitle text for biometric prompt pop-up -->
+    <string name="biometric_prompt_subtitle">Ағымдағы қолданба сеансын жалғастыру үшін саусақ ізін пайдалануға болады.</string>
 
     <!-- Description for the fingerprint authentication dialog box that is shown to the user when opening the app -->
-    <string name="biometric_auth_description">Жалғастыру үшін саусақ баспасын оқу құрылғысын тиіңіз.</string>
+    <string moz:removedIn="103" name="biometric_auth_description">Жалғастыру үшін саусақ баспасын оқу құрылғысын тиіңіз.</string>
 
     <!-- New session button for the fingerprint authentication dialog box that is shown to the user when opening the app.
      When pressed, the user's previous session is cleared, and authentication is not required. -->
-    <string name="biometric_auth_new_session">Жаңа сессия</string>
+    <string moz:removedIn="103" name="biometric_auth_new_session">Жаңа сессия</string>
 
     <!-- Button for the fingerprint authentication dialog box that is shown to the user when sharing a link to the app
     while the user has biometric authentication enabled. When pressed, the user's previous session is cleared, and the shared link is opened. -->
@@ -791,8 +869,6 @@ The new line here must be kept as the second half of the string is clickable for
     <!-- Preference for switching to a new tab immediately after opening -->
     <string name="preference_open_new_tab">Жаңа бетке тура ауысу</string>
 
-    <!-- Preference for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
-    <string moz:removedIn="97" name="preference_category_safe_browsing">Қауіпсіз шолу</string>
     <!-- Preference title for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
     <string name="preference_safe_browsing_title">Қауіпті және алдамшы болуы мүмкін сайттарды блоктау</string>
     <!-- Preference summary for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
@@ -802,8 +878,6 @@ The new line here must be kept as the second half of the string is clickable for
     <string name="preference_https_only_title">Тек-HTTPS режимі</string>
 
     <!-- Description of the preference to enable "HTTPS-Only" mode. -->
-    <string moz:removedIn="98" name="preference_https_only_summary2" tools:ignore="UnusedResources">Қауіпсіздікті арттыру үшін сайттарға HTTPS арқылы автоматты түрде қосылу әрекетін жасайды. HTTPS байланысы сіз кіретін веб-сайттарға дейін қауіпсіз, шифрленген байланысты қамтамасыз етеді.</string>
-
     <string name="preference_https_only_summary3">Қауіпсіздікті арттыру үшін сайттарға HTTPS шифрлеу хаттамасын пайдаланып автоматты түрде қосылу әрекетін жасайды.</string>
 
     <!-- Preference for exceptions tracking protection -->
