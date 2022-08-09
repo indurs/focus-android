@@ -298,8 +298,11 @@
     <string name="preference_security_biometric">Usa l’impronta digitale per sbloccare l’app</string>
     <!-- Preference Summary: Biometrics (iris scan, fingerprint, or facial scan) can be used to unlock Focus if the app had a URL
         open when the app was last run to ensure that only the phone's owner can view a previous session.
-        %1$s will be replaced by the app name (e.g. Firefox Focus) -->
-    <string name="preference_security_biometric_summary">L’impronta digitale ti permette di sbloccare %1$s se un URL è già stato aperto nell’app. Verrà attivata l’impostazione Invisibile.</string>
+        %s will be replaced by the app name (e.g. Firefox Focus)
+        Shortcuts is a feature that allows the user to pin his favorite websites to Focus home screen so he can quickly access them-->
+    <string moz:removedIn="102" name="preference_security_biometric_summary" tools:ignore="UnusedResources">L’impronta digitale ti permette di sbloccare %1$s se un URL è già stato aperto nell’app. Verrà attivata l’impostazione Invisibile.</string>
+
+    <string name="preference_security_biometric_summary2">Sblocca utilizzando l’impronta digitale se hai aggiunto scorciatoie o quando un sito web è già aperto in %s.</string>
 
     <!-- Preference Title: Secure Mode is a setting that prevents the app's content to show up in the "recent apps" screen
          and prevents the user from taking screenshots or casting the app to other displays. -->
@@ -510,7 +513,9 @@
     <string name="onboarding_history_title">Naviga come non hai mai fatto</string>
 
     <!-- Onboarding: History Description -->
-    <string name="onboarding_history_description">Un tocco cancella la cronologia di navigazione e i cookie, impedendo agli annunci pubblicitari di seguirti.</string>
+    <string moz:removedIn="100" name="onboarding_history_description" tools:ignore="UnusedResources">Un tocco cancella la cronologia di navigazione e i cookie, impedendo agli annunci pubblicitari di seguirti.</string>
+
+    <string name="onboarding_history_description2">Un tocco cancella la cronologia di navigazione e i cookie, impedendo agli annunci pubblicitari di seguirti.</string>
 
     <!-- Onboarding: Protection Title -->
     <string name="onboarding_protection_title">Privacy che si adatta a qualsiasi situazione</string>
@@ -524,7 +529,7 @@
     <!-- First run tour (Default browser): Title -->
     <string name="firstrun_defaultbrowser_title">Potenzia la tua privacy</string>
     <!-- First run tour (Default browser): Text. -->
-    <string name="firstrun_defaultbrowser_text2">Porta la navigazione anonima al livello superiore. Blocca pubblicità e altri contenuti che cercano di seguirti attraverso siti diversi e rallentano il caricamento delle pagine.</string>
+    <string name="firstrun_defaultbrowser_text2">Porta la navigazione anonima a un livello superiore. Blocca pubblicità e altri contenuti che cercano di seguirti attraverso siti diversi e rallentano il caricamento delle pagine.</string>
 
     <!-- First run tour (Search): Title -->
     <string name="firstrun_search_title">La ricerca a modo tuo</string>
@@ -677,6 +682,48 @@
     <!-- Preference for autoplay -->
     <string name="preference_autoplay">Riproduzione automatica</string>
 
+    <!-- Heading for the instructions to allow a permission -->
+    <string name="phone_feature_blocked_intro">Per consentirlo:</string>
+
+    <!-- First step for the allowing a permission -->
+    <string name="phone_feature_blocked_step_settings">1. Apri le impostazioni di Android</string>
+
+    <!-- Second step for the allowing a permission -->
+    <string name="phone_feature_blocked_step_permissions"><![CDATA[2. Tocca <b>Autorizzazioni</b>]]></string>
+
+    <!-- Button label that take the user to the Android App setting -->
+    <string name="phone_feature_go_to_settings">Apri Impostazioni</string>
+
+    <!-- Third step for allowing a permission. The placeholder will be updated by, for example, "Camera" -->
+    <string name="phone_feature_blocked_step_feature"><![CDATA[3. Imposta <b>%1$s</b> su Consenti]]></string>
+
+    <!-- Preference for altering the camera access for all websites -->
+    <string name="preference_phone_feature_camera">Fotocamera</string>
+
+    <!-- Preference for altering the microphone access for all websites -->
+    <string name="preference_phone_feature_microphone">Microfono</string>
+
+    <!-- Preference for altering the location access for all websites -->
+    <string name="preference_phone_feature_location">Posizione</string>
+
+    <!-- Preference for altering the notification access for all websites -->
+    <string name="preference_phone_feature_notification">Notifiche</string>
+
+    <!-- Preference for altering the EME access for all websites -->
+    <string name="preference_phone_feature_media_key_system_access">Contenuti protetti da DRM</string>
+
+    <!-- Label that indicates that a permission must be asked always -->
+    <string name="preference_option_phone_feature_ask_to_allow">Chiedi il consenso</string>
+
+    <!-- Label that indicates that a permission must be blocked -->
+    <string name="preference_option_phone_feature_blocked">Bloccato</string>
+
+    <!-- Label that indicates that a permission must be allowed -->
+    <string name="preference_option_phone_feature_allowed">Consentito</string>
+
+    <!--Label that indicates a permission is by the Android OS-->
+    <string name="phone_feature_blocked_by_android">Bloccato da Android</string>
+
     <!-- Preference for allow autoplay audio and video-->
     <string name="preference_allow_audio_video_autoplay">Consenti audio e video</string>
 
@@ -715,14 +762,23 @@
 
     <!-- Title for the fingerprint authentication dialog box that is shown to the user when opening the app.
      %1$s is replaced with the app name -->
-    <string name="biometric_auth_title">Sblocca %1$s</string>
+    <string moz:removedIn="103" name="biometric_auth_title">Sblocca %1$s</string>
+
+    <!-- Text Button for show biometric prompt -->
+    <string name="show_biometric_button_text">Sblocca</string>
+
+    <!-- Title text for biometric prompt pop-up -->
+    <string name="biometric_prompt_title">Conferma utilizzando la tua impronta digitale</string>
+
+    <!-- Subtitle text for biometric prompt pop-up -->
+    <string name="biometric_prompt_subtitle">Puoi utilizzare la tua impronta digitale per continuare la sessione corrente dell’app.</string>
 
     <!-- Description for the fingerprint authentication dialog box that is shown to the user when opening the app -->
-    <string name="biometric_auth_description">Tocca il sensore dell’impronta digitale per continuare.</string>
+    <string moz:removedIn="103" name="biometric_auth_description">Tocca il sensore dell’impronta digitale per continuare.</string>
 
     <!-- New session button for the fingerprint authentication dialog box that is shown to the user when opening the app.
      When pressed, the user's previous session is cleared, and authentication is not required. -->
-    <string name="biometric_auth_new_session">Nuova sessione</string>
+    <string moz:removedIn="103" name="biometric_auth_new_session">Nuova sessione</string>
 
     <!-- Button for the fingerprint authentication dialog box that is shown to the user when sharing a link to the app
     while the user has biometric authentication enabled. When pressed, the user's previous session is cleared, and the shared link is opened. -->
@@ -814,8 +870,6 @@ The new line here must be kept as the second half of the string is clickable for
     <!-- Preference for switching to a new tab immediately after opening -->
     <string name="preference_open_new_tab">Passa direttamente al link nella nuova scheda</string>
 
-    <!-- Preference for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
-    <string moz:removedIn="97" name="preference_category_safe_browsing">Safe Browsing</string>
     <!-- Preference title for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
     <string name="preference_safe_browsing_title">Blocca siti potenzialmente pericolosi e ingannevoli</string>
     <!-- Preference summary for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
@@ -825,8 +879,6 @@ The new line here must be kept as the second half of the string is clickable for
     <string name="preference_https_only_title">Modalità solo HTTPS</string>
 
     <!-- Description of the preference to enable "HTTPS-Only" mode. -->
-    <string moz:removedIn="98" name="preference_https_only_summary2" tools:ignore="UnusedResources">Tenta automaticamente di connettersi ai siti web utilizzando HTTPS per una maggiore sicurezza. Le connessioni HTTPS forniscono una connessione sicura e crittata con i siti visitati.</string>
-
     <string name="preference_https_only_summary3">Tenta automaticamente la connessione ai siti utilizzando il protocollo di crittografia HTTPS per una maggiore sicurezza.</string>
 
     <!-- Preference for exceptions tracking protection -->
