@@ -297,8 +297,11 @@
     <string name="preference_security_biometric">Uygulama kilidini açmak için parmak izimi kullan</string>
     <!-- Preference Summary: Biometrics (iris scan, fingerprint, or facial scan) can be used to unlock Focus if the app had a URL
         open when the app was last run to ensure that only the phone's owner can view a previous session.
-        %1$s will be replaced by the app name (e.g. Firefox Focus) -->
-    <string name="preference_security_biometric_summary">%1$s’ta açık bir sayfa varsa uygulamanın kilidini parmak izinizle açmanız gerekir. Görünmezlik özelliği de açılır.</string>
+        %s will be replaced by the app name (e.g. Firefox Focus)
+        Shortcuts is a feature that allows the user to pin his favorite websites to Focus home screen so he can quickly access them-->
+    <string moz:removedIn="102" name="preference_security_biometric_summary" tools:ignore="UnusedResources">%1$s’ta açık bir sayfa varsa uygulamanın kilidini parmak izinizle açmanız gerekir. Görünmezlik özelliği de açılır.</string>
+
+    <string name="preference_security_biometric_summary2">Kısayollar eklediysem veya %s tarayıcısında bir web sitesi açıksa kilidi parmak iziyle aç.</string>
 
     <!-- Preference Title: Secure Mode is a setting that prevents the app's content to show up in the "recent apps" screen
          and prevents the user from taking screenshots or casting the app to other displays. -->
@@ -495,6 +498,28 @@
     <!-- %1$s will be replaced by the app name and build variant(e.g. Firefox Focus, Firefox Klar Nightly) -->
     <string name="onboarding_title">%1$s’a hoş geldiniz!</string>
 
+    <!-- Onboarding: Description -->
+    <string name="onboarding_description">İstediğiniz an gizli gezinti</string>
+
+    <!-- Onboarding: Incognito Title -->
+    <string name="onboarding_incognito_title">Gizli gezinti görünmezlikle buluşuyor</string>
+
+    <!-- Onboarding: Incognito Description -->
+    <!-- Text %s will be replaced with the name of the app (e.g. Focus, Klar) -->
+    <string name="onboarding_incognito_description">%s, son derece güçlü izlenme ve çerez korumasına sahip, gizliliğe öncelik veren bir tarayıcıdır.</string>
+
+    <!-- Onboarding: History Title -->
+    <string name="onboarding_history_title">Hiç yaşanmamış gibi gezin</string>
+
+    <!-- Onboarding: History Description -->
+    <string name="onboarding_history_description2">Tek dokunuşla gezinti geçmişinizi ve çerezlerinizi silebilirsiniz. Üstelik reklamlar sizi izleyemez.</string>
+
+    <!-- Onboarding: Protection Title -->
+    <string name="onboarding_protection_title">Her duruma uygun gizlilik</string>
+
+    <!-- Onboarding: Protection Description -->
+    <string name="onboarding_protection_description">Gezinme ihtiyaçlarınız değişirse gizlilik ayarlarınızı kolayca artırıp azaltabilirsiniz.</string>
+
     <!-- Onboarding: Start browsing -->
     <string name="onboarding_start_browsing">Gezinmeye başlayın</string>
 
@@ -590,7 +615,7 @@
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the GPL
     %3$s will be replaced with a URL linking to the tracking protection wiki page (e.g. https://wiki.mozilla.org/Security/Tracking_protection#Lists) -->
-    <string name="your_rights_content5"><![CDATA[%1$s ayrıca Disconnect, Inc. tarafından sağlanan engelleme listelerini kullanır. %1$s’tan ayrı ve bağımsız olan <a href="%3$s">bu çalışmalar</a> <a href="%2$s">GNU Kamu Lisansı v3</a> ile sunulmaktadır.]]></string>
+    <string name="your_rights_content5"><![CDATA[%1$s ayrıca Disconnect, Inc. tarafından sağlanan engelleme listelerini kullanır. Tarayıcıdan ayrı ve bağımsız olan <a href="%3$s">bu çalışmalar</a> <a href="%2$s">GNU Kamu Lisansı v3</a> ile sunulmaktadır.]]></string>
 
     <!-- Text shown in prompts for GeckoView -->
     <string name="gv_prompt_username_hint">Kullanıcı adı</string>
@@ -654,6 +679,48 @@
     <!-- Preference for autoplay -->
     <string name="preference_autoplay">Otomatik oynatma</string>
 
+    <!-- Heading for the instructions to allow a permission -->
+    <string name="phone_feature_blocked_intro">İzin vermek için:</string>
+
+    <!-- First step for the allowing a permission -->
+    <string name="phone_feature_blocked_step_settings">1. Android ayarlarına gidin</string>
+
+    <!-- Second step for the allowing a permission -->
+    <string name="phone_feature_blocked_step_permissions"><![CDATA[2. <b>İzinler</b>’e dokunun]]></string>
+
+    <!-- Button label that take the user to the Android App setting -->
+    <string name="phone_feature_go_to_settings">Ayarlara git</string>
+
+    <!-- Third step for allowing a permission. The placeholder will be updated by, for example, "Camera" -->
+    <string name="phone_feature_blocked_step_feature"><![CDATA[3. <b>%1$s</b> ayarını AÇIK yapın]]></string>
+
+    <!-- Preference for altering the camera access for all websites -->
+    <string name="preference_phone_feature_camera">Kamera</string>
+
+    <!-- Preference for altering the microphone access for all websites -->
+    <string name="preference_phone_feature_microphone">Mikrofon</string>
+
+    <!-- Preference for altering the location access for all websites -->
+    <string name="preference_phone_feature_location">Konum</string>
+
+    <!-- Preference for altering the notification access for all websites -->
+    <string name="preference_phone_feature_notification">Bildirim</string>
+
+    <!-- Preference for altering the EME access for all websites -->
+    <string name="preference_phone_feature_media_key_system_access">DRM denetimli içerikler</string>
+
+    <!-- Label that indicates that a permission must be asked always -->
+    <string name="preference_option_phone_feature_ask_to_allow">İzin iste</string>
+
+    <!-- Label that indicates that a permission must be blocked -->
+    <string name="preference_option_phone_feature_blocked">Engellendi</string>
+
+    <!-- Label that indicates that a permission must be allowed -->
+    <string name="preference_option_phone_feature_allowed">İzin verildi</string>
+
+    <!--Label that indicates a permission is by the Android OS-->
+    <string name="phone_feature_blocked_by_android">Android tarafından engellendi</string>
+
     <!-- Preference for allow autoplay audio and video-->
     <string name="preference_allow_audio_video_autoplay">Ses ve videoya izin ver</string>
 
@@ -692,14 +759,23 @@
 
     <!-- Title for the fingerprint authentication dialog box that is shown to the user when opening the app.
      %1$s is replaced with the app name -->
-    <string name="biometric_auth_title">%1$s kilidini aç</string>
+    <string moz:removedIn="103" name="biometric_auth_title">%1$s kilidini aç</string>
+
+    <!-- Text Button for show biometric prompt -->
+    <string name="show_biometric_button_text">Kilidi aç</string>
+
+    <!-- Title text for biometric prompt pop-up -->
+    <string name="biometric_prompt_title">Parmak izinizle onaylayın</string>
+
+    <!-- Subtitle text for biometric prompt pop-up -->
+    <string name="biometric_prompt_subtitle">Mevcut uygulama oturumunuza devam etmek için parmak izinizi kullanabilirsiniz.</string>
 
     <!-- Description for the fingerprint authentication dialog box that is shown to the user when opening the app -->
-    <string name="biometric_auth_description">Devam etmek için parmak izi sensörüne dokunun.</string>
+    <string moz:removedIn="103" name="biometric_auth_description">Devam etmek için parmak izi sensörüne dokunun.</string>
 
     <!-- New session button for the fingerprint authentication dialog box that is shown to the user when opening the app.
      When pressed, the user's previous session is cleared, and authentication is not required. -->
-    <string name="biometric_auth_new_session">Yeni oturum</string>
+    <string moz:removedIn="103" name="biometric_auth_new_session">Yeni oturum</string>
 
     <!-- Button for the fingerprint authentication dialog box that is shown to the user when sharing a link to the app
     while the user has biometric authentication enabled. When pressed, the user's previous session is cleared, and the shared link is opened. -->
@@ -795,8 +871,6 @@ The new line here must be kept as the second half of the string is clickable for
     <!-- Preference for switching to a new tab immediately after opening -->
     <string name="preference_open_new_tab">Hemen yeni sekmedeki bağlantıya geç</string>
 
-    <!-- Preference for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
-    <string moz:removedIn="97" name="preference_category_safe_browsing">Güvenli gezinti</string>
     <!-- Preference title for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
     <string name="preference_safe_browsing_title">Olası tehlikeli ve aldatıcı siteleri engelle</string>
     <!-- Preference summary for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
@@ -806,8 +880,6 @@ The new line here must be kept as the second half of the string is clickable for
     <string name="preference_https_only_title">Yalnızca HTTPS modu</string>
 
     <!-- Description of the preference to enable "HTTPS-Only" mode. -->
-    <string moz:removedIn="98" name="preference_https_only_summary2" tools:ignore="UnusedResources">Daha fazla güvenlik için HTTPS kullanan sitelere otomatik olarak bağlanmaya çalışır. HTTPS bağlantıları, ziyaret ettiğiniz web sitelerine güvenli, şifreli bir bağlantı sağlar.</string>
-
     <string name="preference_https_only_summary3">Daha fazla güvenlik için sitelere otomatik olarak HTTPS şifreleme protokolüyle bağlanmaya çalışır.</string>
 
     <!-- Preference for exceptions tracking protection -->
