@@ -174,7 +174,7 @@
     <string name="preference_show_search_suggestions">Keresési javaslatok kérése</string>
     <!-- Description of the preference that enables/disables search suggestions
         %1$s will be replaced by the app name (e.g. Firefox Focus) -->
-    <string name="preference_show_search_suggestions_summary">A %1$s elküldi a címsávba írt szöget a keresőszolgáltatásának</string>
+    <string name="preference_show_search_suggestions_summary">A %1$s elküldi a címsávba írt szöveget a keresőszolgáltatásának</string>
 
     <!-- This label is shown below the name of the default search engine in settings -->
     <string name="preference_search_engine_default">Alapértelmezett</string>
@@ -297,8 +297,11 @@
     <string name="preference_security_biometric">Ujjlenyomat használata az alkalmazás feloldásához</string>
     <!-- Preference Summary: Biometrics (iris scan, fingerprint, or facial scan) can be used to unlock Focus if the app had a URL
         open when the app was last run to ensure that only the phone's owner can view a previous session.
-        %1$s will be replaced by the app name (e.g. Firefox Focus) -->
-    <string name="preference_security_biometric_summary">Az ujjlenyomata feloldhatja a %1$st, ha egy URL már meg lett nyitva az alkalmazásban. A rejtőzködés be lesz kapcsolva.</string>
+        %s will be replaced by the app name (e.g. Firefox Focus)
+        Shortcuts is a feature that allows the user to pin his favorite websites to Focus home screen so he can quickly access them-->
+    <string moz:removedIn="102" name="preference_security_biometric_summary" tools:ignore="UnusedResources">Az ujjlenyomata feloldhatja a %1$st, ha egy URL már meg lett nyitva az alkalmazásban. A rejtőzködés be lesz kapcsolva.</string>
+
+    <string name="preference_security_biometric_summary2">Oldja fel a zárolást ujjlenyomattal, ha adott hozzá parancsikonokat, vagy ha egy webhely már meg van nyitva a %sban.</string>
 
     <!-- Preference Title: Secure Mode is a setting that prevents the app's content to show up in the "recent apps" screen
          and prevents the user from taking screenshots or casting the app to other displays. -->
@@ -509,7 +512,9 @@
     <string name="onboarding_history_title">Böngésszen úgy, mintha meg sem történt volna</string>
 
     <!-- Onboarding: History Description -->
-    <string name="onboarding_history_description">Egy koppintás törli a böngészési előzményeket és a sütiket – és megakadályozza, hogy a hirdetések kövessék.</string>
+    <string moz:removedIn="100" name="onboarding_history_description" tools:ignore="UnusedResources">Egy koppintás törli a böngészési előzményeket és a sütiket – és megakadályozza, hogy a hirdetések kövessék.</string>
+
+    <string name="onboarding_history_description2">Egy koppintás törli a böngészési előzményeket és a sütiket – és megakadályozza, hogy a hirdetések kövessék.</string>
 
     <!-- Onboarding: Protection Title -->
     <string name="onboarding_protection_title">Adatvédelem minden helyzethez</string>
@@ -531,7 +536,7 @@
     <string name="firstrun_search_text">Valami mást keres? Válasszon másik alapértelmezett keresőszolgáltatást a Beállításokban.</string>
 
     <!-- First run tour (Shortcut): Title -->
-    <string name="firstrun_shortcut_title">Adjon ikonokat a kezdőképernyőre</string>
+    <string name="firstrun_shortcut_title">Parancsikonok hozzáadása a kezdőképernyőhöz</string>
     <!-- First run tour (Shortcut): Text. %1$s will be replaced with the name of the app (e.g. Firefox Focus) -->
     <string name="firstrun_shortcut_text">Térjen vissza gyorsan a kedvenc oldalaihoz a %1$sban. Csak válassza a „Hozzáadás a kezdőképernyőre” lehetőséget a %1$s menüből.</string>
 
@@ -676,6 +681,48 @@
     <!-- Preference for autoplay -->
     <string name="preference_autoplay">Automatikus lejátszás</string>
 
+    <!-- Heading for the instructions to allow a permission -->
+    <string name="phone_feature_blocked_intro">Az engedélyezés módja:</string>
+
+    <!-- First step for the allowing a permission -->
+    <string name="phone_feature_blocked_step_settings">1. Ugorjon az Android beállításokhoz</string>
+
+    <!-- Second step for the allowing a permission -->
+    <string name="phone_feature_blocked_step_permissions"><![CDATA[2. Koppintson az <b>Engedélyek</b> lehetőségre]]></string>
+
+    <!-- Button label that take the user to the Android App setting -->
+    <string name="phone_feature_go_to_settings">Ugrás a beállításokhoz</string>
+
+    <!-- Third step for allowing a permission. The placeholder will be updated by, for example, "Camera" -->
+    <string name="phone_feature_blocked_step_feature"><![CDATA[3. Kapcsolja BE a következőt: <b>%1$s</b>]]></string>
+
+    <!-- Preference for altering the camera access for all websites -->
+    <string name="preference_phone_feature_camera">Kamera</string>
+
+    <!-- Preference for altering the microphone access for all websites -->
+    <string name="preference_phone_feature_microphone">Mikrofon</string>
+
+    <!-- Preference for altering the location access for all websites -->
+    <string name="preference_phone_feature_location">Hely</string>
+
+    <!-- Preference for altering the notification access for all websites -->
+    <string name="preference_phone_feature_notification">Értesítés</string>
+
+    <!-- Preference for altering the EME access for all websites -->
+    <string name="preference_phone_feature_media_key_system_access">DRM-vezérelt tartalom</string>
+
+    <!-- Label that indicates that a permission must be asked always -->
+    <string name="preference_option_phone_feature_ask_to_allow">Kérdezzen rá</string>
+
+    <!-- Label that indicates that a permission must be blocked -->
+    <string name="preference_option_phone_feature_blocked">Blokkolva</string>
+
+    <!-- Label that indicates that a permission must be allowed -->
+    <string name="preference_option_phone_feature_allowed">Engedélyezve</string>
+
+    <!--Label that indicates a permission is by the Android OS-->
+    <string name="phone_feature_blocked_by_android">Az Android blokkolta</string>
+
     <!-- Preference for allow autoplay audio and video-->
     <string name="preference_allow_audio_video_autoplay">Hang és videó engedélyezése</string>
 
@@ -714,14 +761,23 @@
 
     <!-- Title for the fingerprint authentication dialog box that is shown to the user when opening the app.
      %1$s is replaced with the app name -->
-    <string name="biometric_auth_title">A %1$s feloldása</string>
+    <string moz:removedIn="103" name="biometric_auth_title">A %1$s feloldása</string>
+
+    <!-- Text Button for show biometric prompt -->
+    <string name="show_biometric_button_text">Feloldás</string>
+
+    <!-- Title text for biometric prompt pop-up -->
+    <string name="biometric_prompt_title">Erősítse meg az ujjlenyomatával</string>
+
+    <!-- Subtitle text for biometric prompt pop-up -->
+    <string name="biometric_prompt_subtitle">Ujjlenyomatával folytathatja az alkalmazás jelenlegi munkamenetét.</string>
 
     <!-- Description for the fingerprint authentication dialog box that is shown to the user when opening the app -->
-    <string name="biometric_auth_description">Érintse meg az ujjlenyomat-leolvasót a folytatáshoz.</string>
+    <string moz:removedIn="103" name="biometric_auth_description">Érintse meg az ujjlenyomat-leolvasót a folytatáshoz.</string>
 
     <!-- New session button for the fingerprint authentication dialog box that is shown to the user when opening the app.
      When pressed, the user's previous session is cleared, and authentication is not required. -->
-    <string name="biometric_auth_new_session">Új munkamenetet</string>
+    <string moz:removedIn="103" name="biometric_auth_new_session">Új munkamenetet</string>
 
     <!-- Button for the fingerprint authentication dialog box that is shown to the user when sharing a link to the app
     while the user has biometric authentication enabled. When pressed, the user's previous session is cleared, and the shared link is opened. -->
@@ -817,8 +873,6 @@ The new line here must be kept as the second half of the string is clickable for
     <!-- Preference for switching to a new tab immediately after opening -->
     <string name="preference_open_new_tab">Azonnali átváltás az új fülre</string>
 
-    <!-- Preference for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
-    <string moz:removedIn="97" name="preference_category_safe_browsing">Biztonságos böngészés</string>
     <!-- Preference title for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
     <string name="preference_safe_browsing_title">A potenciálisan veszélyes és megtévesztő oldalak blokkolása</string>
     <!-- Preference summary for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
@@ -828,8 +882,6 @@ The new line here must be kept as the second half of the string is clickable for
     <string name="preference_https_only_title">Csak HTTPS mód</string>
 
     <!-- Description of the preference to enable "HTTPS-Only" mode. -->
-    <string moz:removedIn="98" name="preference_https_only_summary2" tools:ignore="UnusedResources">Automatikusan HTTPS-sel próbál kapcsolódni a webhelyekhez a nagyobb biztonság érdekében. A HTTPS-kapcsolatok biztonságos, titkosított kapcsolatot biztosítanak a felkeresett webhelyekkel.</string>
-
     <string name="preference_https_only_summary3">Automatikusan HTTPS titkosítási protokoll használatával próbál meg csatlakozni a webhelyekhez a fokozott biztonság érdekében.</string>
 
     <!-- Preference for exceptions tracking protection -->
