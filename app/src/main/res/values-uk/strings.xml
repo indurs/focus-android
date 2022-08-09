@@ -56,7 +56,7 @@
     <string name="menu_whats_new">Що нового</string>
     <string name="menu_settings">Налаштування</string>
     <string name="menu_about">Про</string>
-    <string name="menu_help">Допомога</string>
+    <string name="menu_help">Довідка</string>
     <string name="menu_rights">Ваші права</string>
 
     <!-- Menu item: This is the label for a menu entry that shows how many trackers have been blocked
@@ -148,7 +148,7 @@
     <!-- Preference category description for settings screen for settings related to Mozilla -->
     <!-- About the app and help are links that are inside this menu -->
     <!-- %1$s will be replaced by the app name (e.g. Firefox Focus) -->
-    <string name="preference_mozilla_summary">Про %1$s, допомога</string>
+    <string name="preference_mozilla_summary">Про %1$s, довідка</string>
 
     <!-- Preference category for ad blocking and enhanced tracking protection settings -->
     <string name="preference_category_tracking_protection3">Розширений захист від стеження</string>
@@ -297,8 +297,11 @@
     <string name="preference_security_biometric">Використовувати відбиток пальця для розблокування</string>
     <!-- Preference Summary: Biometrics (iris scan, fingerprint, or facial scan) can be used to unlock Focus if the app had a URL
         open when the app was last run to ensure that only the phone's owner can view a previous session.
-        %1$s will be replaced by the app name (e.g. Firefox Focus) -->
-    <string name="preference_security_biometric_summary">Ваш відбиток пальця може розблокувати %1$s, якщо URL-адресу вже відкрито в програмі. Буде увімкнено режим Під прикриттям.</string>
+        %s will be replaced by the app name (e.g. Firefox Focus)
+        Shortcuts is a feature that allows the user to pin his favorite websites to Focus home screen so he can quickly access them-->
+    <string moz:removedIn="102" name="preference_security_biometric_summary" tools:ignore="UnusedResources">Ваш відбиток пальця може розблокувати %1$s, якщо URL-адресу вже відкрито в програмі. Буде увімкнено режим Під прикриттям.</string>
+
+    <string name="preference_security_biometric_summary2">Розблокуйте відбитком пальця, якщо ви додали ярлики, або якщо вебсайт вже відкритий у %s.</string>
 
     <!-- Preference Title: Secure Mode is a setting that prevents the app's content to show up in the "recent apps" screen
          and prevents the user from taking screenshots or casting the app to other displays. -->
@@ -509,7 +512,7 @@
     <string name="onboarding_history_title">Переглядайте інтернет як ніколи раніше</string>
 
     <!-- Onboarding: History Description -->
-    <string name="onboarding_history_description">Одне торкання видаляє вашу історію вебперегляду й куки та запобігає стеженню реклами за вами.</string>
+    <string name="onboarding_history_description2">Одне торкання видаляє вашу історію вебперегляду й куки та запобігає стеженню реклами за вами.</string>
 
     <!-- Onboarding: Protection Title -->
     <string name="onboarding_protection_title">Приватність, яка підходить для будь-якої ситуації</string>
@@ -676,6 +679,48 @@
     <!-- Preference for autoplay -->
     <string name="preference_autoplay">Автовідтворення</string>
 
+    <!-- Heading for the instructions to allow a permission -->
+    <string name="phone_feature_blocked_intro">Щоб дозволити це:</string>
+
+    <!-- First step for the allowing a permission -->
+    <string name="phone_feature_blocked_step_settings">1. Відкрийте налаштування Android</string>
+
+    <!-- Second step for the allowing a permission -->
+    <string name="phone_feature_blocked_step_permissions"><![CDATA[2. Торкніться <b>Дозволи</b>]]></string>
+
+    <!-- Button label that take the user to the Android App setting -->
+    <string name="phone_feature_go_to_settings">Перейти до налаштувань</string>
+
+    <!-- Third step for allowing a permission. The placeholder will be updated by, for example, "Camera" -->
+    <string name="phone_feature_blocked_step_feature"><![CDATA[3. Увімкніть перемикач <b>%1$s</b>]]></string>
+
+    <!-- Preference for altering the camera access for all websites -->
+    <string name="preference_phone_feature_camera">Камера</string>
+
+    <!-- Preference for altering the microphone access for all websites -->
+    <string name="preference_phone_feature_microphone">Мікрофон</string>
+
+    <!-- Preference for altering the location access for all websites -->
+    <string name="preference_phone_feature_location">Розташування</string>
+
+    <!-- Preference for altering the notification access for all websites -->
+    <string name="preference_phone_feature_notification">Сповіщення</string>
+
+    <!-- Preference for altering the EME access for all websites -->
+    <string name="preference_phone_feature_media_key_system_access">Вміст, контрольований DRM</string>
+
+    <!-- Label that indicates that a permission must be asked always -->
+    <string name="preference_option_phone_feature_ask_to_allow">Запитувати дозвіл</string>
+
+    <!-- Label that indicates that a permission must be blocked -->
+    <string name="preference_option_phone_feature_blocked">Заблоковано</string>
+
+    <!-- Label that indicates that a permission must be allowed -->
+    <string name="preference_option_phone_feature_allowed">Дозволено</string>
+
+    <!--Label that indicates a permission is by the Android OS-->
+    <string name="phone_feature_blocked_by_android">Заблоковано Android</string>
+
     <!-- Preference for allow autoplay audio and video-->
     <string name="preference_allow_audio_video_autoplay">Дозволити аудіо та відео</string>
 
@@ -714,14 +759,23 @@
 
     <!-- Title for the fingerprint authentication dialog box that is shown to the user when opening the app.
      %1$s is replaced with the app name -->
-    <string name="biometric_auth_title">Розблокувати %1$s</string>
+    <string moz:removedIn="103" name="biometric_auth_title">Розблокувати %1$s</string>
+
+    <!-- Text Button for show biometric prompt -->
+    <string name="show_biometric_button_text">Розблокувати</string>
+
+    <!-- Title text for biometric prompt pop-up -->
+    <string name="biometric_prompt_title">Підтвердьте з відбитком пальця</string>
+
+    <!-- Subtitle text for biometric prompt pop-up -->
+    <string name="biometric_prompt_subtitle">Ви можете скористатися відбитком пальця, щоб продовжити поточний сеанс програми.</string>
 
     <!-- Description for the fingerprint authentication dialog box that is shown to the user when opening the app -->
-    <string name="biometric_auth_description">Торкніться датчика відбитку пальця для продовження.</string>
+    <string moz:removedIn="103" name="biometric_auth_description">Торкніться датчика відбитку пальця для продовження.</string>
 
     <!-- New session button for the fingerprint authentication dialog box that is shown to the user when opening the app.
      When pressed, the user's previous session is cleared, and authentication is not required. -->
-    <string name="biometric_auth_new_session">Новий сеанс</string>
+    <string moz:removedIn="103" name="biometric_auth_new_session">Новий сеанс</string>
 
     <!-- Button for the fingerprint authentication dialog box that is shown to the user when sharing a link to the app
     while the user has biometric authentication enabled. When pressed, the user's previous session is cleared, and the shared link is opened. -->
@@ -817,8 +871,6 @@ The new line here must be kept as the second half of the string is clickable for
     <!-- Preference for switching to a new tab immediately after opening -->
     <string name="preference_open_new_tab">Негайно перемикати на посилання в новій вкладці</string>
 
-    <!-- Preference for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
-    <string moz:removedIn="97" name="preference_category_safe_browsing">Безпечний перегляд</string>
     <!-- Preference title for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
     <string name="preference_safe_browsing_title">Блокувати потенційно небезпечні та підозрілі сайти</string>
     <!-- Preference summary for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
@@ -828,8 +880,6 @@ The new line here must be kept as the second half of the string is clickable for
     <string name="preference_https_only_title">HTTPS-режим</string>
 
     <!-- Description of the preference to enable "HTTPS-Only" mode. -->
-    <string moz:removedIn="98" name="preference_https_only_summary2" tools:ignore="UnusedResources">Автоматично намагається з’єднатися з сайтами з використанням HTTPS для підвищення безпеки. HTTPS-з’єднання забезпечують захищений, зашифрований обмін даними з відвідуваними вебсайтами.</string>
-
     <string name="preference_https_only_summary3">Намагатися автоматично доступатися до сайтів за допомогою протоколу шифрування HTTPS для поліпшення безпеки.</string>
 
     <!-- Preference for exceptions tracking protection -->
