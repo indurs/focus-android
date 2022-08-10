@@ -298,8 +298,11 @@
     <string name="preference_security_biometric">ਐਪ ਅਣ-ਲਾਕ ਕਰਨ ਲਈ ਫਿੰਗਰਪਰਿੰਟ ਵਰਤੋ</string>
     <!-- Preference Summary: Biometrics (iris scan, fingerprint, or facial scan) can be used to unlock Focus if the app had a URL
         open when the app was last run to ensure that only the phone's owner can view a previous session.
-        %1$s will be replaced by the app name (e.g. Firefox Focus) -->
-    <string name="preference_security_biometric_summary">ਜੇ URL ਪਹਿਲਾਂ ਹੀ ਐਪ ਵਿੱਚ ਖੁੱਲ੍ਹਾ ਹੈ ਤਾਂ ਤੁਹਾਡਾ ਉਂਗਲ-ਨਿਸ਼ਾਨ %1$s ਨੂੰ ਅਣ-ਲਾਕ ਕਰ ਸਕਦਾ ਹੈ। ਭੇਤੀ ਰੂਪ ਨੂੰ ਚਾਲੂ ਕੀਤਾ ਜਾਵੇਗਾ।</string>
+        %s will be replaced by the app name (e.g. Firefox Focus)
+        Shortcuts is a feature that allows the user to pin his favorite websites to Focus home screen so he can quickly access them-->
+    <string moz:removedIn="102" name="preference_security_biometric_summary" tools:ignore="UnusedResources">ਜੇ URL ਪਹਿਲਾਂ ਹੀ ਐਪ ਵਿੱਚ ਖੁੱਲ੍ਹਾ ਹੈ ਤਾਂ ਤੁਹਾਡਾ ਉਂਗਲ-ਨਿਸ਼ਾਨ %1$s ਨੂੰ ਅਣ-ਲਾਕ ਕਰ ਸਕਦਾ ਹੈ। ਭੇਤੀ ਰੂਪ ਨੂੰ ਚਾਲੂ ਕੀਤਾ ਜਾਵੇਗਾ।</string>
+
+    <string name="preference_security_biometric_summary2">ਜੇ ਤੁਸੀਂ ਸ਼ਾਰਟਕੱਟ ਜੋੜਿਆ ਹੈ ਜਾਂ ਜਦੋਂ ਵੈੱਬਸਾਈਟ ਪਹਿਲਾਂ ਹੀ %s ਵਿੱਚ ਖੁੱਲ੍ਹੀ ਹੈ ਤਾਂ ਫਿੰਗਰਪਰਿੰਟ ਵਰਤ ਕੇ ਅਣ-ਲਾਕ ਕਰੋ।</string>
 
     <!-- Preference Title: Secure Mode is a setting that prevents the app's content to show up in the "recent apps" screen
          and prevents the user from taking screenshots or casting the app to other displays. -->
@@ -504,7 +507,9 @@
     <string name="onboarding_history_title">ਇੰਝ ਬਰਾਊਜ਼ ਕਰੋ, ਜਿਵੇਂ ਕਦੇ ਕੀਤੀ ਹੀ ਨਾ ਹੋਵੇ</string>
 
     <!-- Onboarding: History Description -->
-    <string name="onboarding_history_description">ਆਪਣੇ ਬਰਾਊਜ਼ ਕਰਨ ਦੇ ਅਤੀਤ ਤੇ ਕੂਕੀਜ਼ ਨੂੰ ਇੱਕ ਛੋਹ ਨਾਲ ਮਿਟਾਓ — ਤੇ ਤੁਹਾਡਾ ਪਿੱਛਾ ਕਰਨ ਰਹੇ ਇਸ਼ਤਿਹਾਰਾਂ ਨੂੰ ਰੋਕ ਦਿੰਦੀ ਹੈ।</string>
+    <string moz:removedIn="100" name="onboarding_history_description" tools:ignore="UnusedResources">ਆਪਣੇ ਬਰਾਊਜ਼ ਕਰਨ ਦੇ ਅਤੀਤ ਤੇ ਕੂਕੀਜ਼ ਨੂੰ ਇੱਕ ਛੋਹ ਨਾਲ ਮਿਟਾਓ — ਤੇ ਤੁਹਾਡਾ ਪਿੱਛਾ ਕਰਨ ਰਹੇ ਇਸ਼ਤਿਹਾਰਾਂ ਨੂੰ ਰੋਕ ਦਿੰਦੀ ਹੈ।</string>
+
+    <string name="onboarding_history_description2">ਆਪਣੇ ਬਰਾਊਜ਼ ਕਰਨ ਦੇ ਅਤੀਤ ਤੇ ਕੂਕੀਜ਼ ਨੂੰ ਇੱਕ ਛੋਹ ਨਾਲ ਮਿਟਾਓ — ਤੇ ਇਹ ਤੁਹਾਡਾ ਪਿੱਛਾ ਕਰਨ ਰਹੇ ਇਸ਼ਤਿਹਾਰਾਂ ਨੂੰ ਰੋਕ ਦਿੰਦੀ ਹੈ।</string>
 
     <!-- Onboarding: Protection Title -->
     <string name="onboarding_protection_title">ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿੱਚ ਫਿੱਟ ਆਉਣ ਵਾਲੀ ਪਰਦੇਦਾਦਰੀ</string>
@@ -670,6 +675,48 @@
     <!-- Preference for autoplay -->
     <string name="preference_autoplay">ਆਪੇ-ਚਲਾਓ</string>
 
+    <!-- Heading for the instructions to allow a permission -->
+    <string name="phone_feature_blocked_intro">ਇਸਨੂੰ ਸਹਿਮਤੀ ਦੇਣ ਲਈ:</string>
+
+    <!-- First step for the allowing a permission -->
+    <string name="phone_feature_blocked_step_settings">1. Android ਸੈਟਿੰਗਾਂ ਉੱਤੇ ਜਾਓ</string>
+
+    <!-- Second step for the allowing a permission -->
+    <string name="phone_feature_blocked_step_permissions"><![CDATA[2. <b>ਇਜਾਜ਼ਤਾਂ</b> ਨੂੰ ਛੂਹੋ]]></string>
+
+    <!-- Button label that take the user to the Android App setting -->
+    <string name="phone_feature_go_to_settings">ਸੈਟਿੰਗਾਂ ਉੱਤੇ ਜਾਓ</string>
+
+    <!-- Third step for allowing a permission. The placeholder will be updated by, for example, "Camera" -->
+    <string name="phone_feature_blocked_step_feature"><![CDATA[3. <b>%1$s</b> ਨੂੰ ਚਾਲੂ ਲਈ ਬਦਲੋ]]></string>
+
+    <!-- Preference for altering the camera access for all websites -->
+    <string name="preference_phone_feature_camera">ਕੈਮਰਾ</string>
+
+    <!-- Preference for altering the microphone access for all websites -->
+    <string name="preference_phone_feature_microphone">ਮਾਈਕਰੋਫ਼ੋਨ</string>
+
+    <!-- Preference for altering the location access for all websites -->
+    <string name="preference_phone_feature_location">ਟਿਕਾਣਾ</string>
+
+    <!-- Preference for altering the notification access for all websites -->
+    <string name="preference_phone_feature_notification">ਸੂਚਨਾਵਾਂ</string>
+
+    <!-- Preference for altering the EME access for all websites -->
+    <string name="preference_phone_feature_media_key_system_access">DRM-ਕੰਟਰੋਲ ਕੀਤੀ ਸਮੱਗਰੀ</string>
+
+    <!-- Label that indicates that a permission must be asked always -->
+    <string name="preference_option_phone_feature_ask_to_allow">ਮਨਜ਼ੂਰੀ ਲਈ ਪੁੱਛੋ</string>
+
+    <!-- Label that indicates that a permission must be blocked -->
+    <string name="preference_option_phone_feature_blocked">ਪਾਬੰਦੀ ਲਗਾਈ</string>
+
+    <!-- Label that indicates that a permission must be allowed -->
+    <string name="preference_option_phone_feature_allowed">ਇਜਾਜ਼ਤ ਦਿੱਤੇ</string>
+
+    <!--Label that indicates a permission is by the Android OS-->
+    <string name="phone_feature_blocked_by_android">Android ਵਲੋਂ ਪਾਬੰਦੀ ਲਗਾਈ</string>
+
     <!-- Preference for allow autoplay audio and video-->
     <string name="preference_allow_audio_video_autoplay">ਆਡੀਓ ਅਤੇ ਵੀਡਿਓ ਦੀ ਇਜਾਜ਼ਤ ਦਿਓ</string>
 
@@ -708,14 +755,23 @@
 
     <!-- Title for the fingerprint authentication dialog box that is shown to the user when opening the app.
      %1$s is replaced with the app name -->
-    <string name="biometric_auth_title">%1$s ਅਣ-ਲਾਕ ਕਰੋ</string>
+    <string moz:removedIn="103" name="biometric_auth_title">%1$s ਅਣ-ਲਾਕ ਕਰੋ</string>
+
+    <!-- Text Button for show biometric prompt -->
+    <string name="show_biometric_button_text">ਅਣ-ਲਾਕ ਕਰੋ</string>
+
+    <!-- Title text for biometric prompt pop-up -->
+    <string name="biometric_prompt_title">ਆਪਣੇ ਫਿੰਗਰਪਰਿੰਟ ਵਰਤ ਕੇ ਤਸਦੀਕ ਕਰੋ</string>
+
+    <!-- Subtitle text for biometric prompt pop-up -->
+    <string name="biometric_prompt_subtitle">ਹੁਣ ਤੁਸੀ ਆਪਣੇ ਮੌਜੂਦਾ ਐਪ ਸ਼ੈਸ਼ਨ ਲਈ ਆਪਣੇ ਫਿੰਗਰਪਰਿੰਟ ਨੂੰ ਵਰਤ ਸਕਦੇ ਹੋ।</string>
 
     <!-- Description for the fingerprint authentication dialog box that is shown to the user when opening the app -->
-    <string name="biometric_auth_description">ਜਾਰੀ ਰੱਖਣ ਲਈ ਫਿੰਗਰਪਰਿੰਟ ਸੈਂਸਰ ਨੂੰ ਛੂਹੋ।</string>
+    <string moz:removedIn="103" name="biometric_auth_description">ਜਾਰੀ ਰੱਖਣ ਲਈ ਫਿੰਗਰਪਰਿੰਟ ਸੈਂਸਰ ਨੂੰ ਛੂਹੋ।</string>
 
     <!-- New session button for the fingerprint authentication dialog box that is shown to the user when opening the app.
      When pressed, the user's previous session is cleared, and authentication is not required. -->
-    <string name="biometric_auth_new_session">ਨਵਾਂ ਸ਼ੈਸ਼ਨ</string>
+    <string moz:removedIn="103" name="biometric_auth_new_session">ਨਵਾਂ ਸ਼ੈਸ਼ਨ</string>
 
     <!-- Button for the fingerprint authentication dialog box that is shown to the user when sharing a link to the app
     while the user has biometric authentication enabled. When pressed, the user's previous session is cleared, and the shared link is opened. -->
@@ -815,8 +871,6 @@ The new line here must be kept as the second half of the string is clickable for
     <!-- Preference for switching to a new tab immediately after opening -->
     <string name="preference_open_new_tab">ਲਿੰਕ ਨੂੰ ਤੁਰੰਤ ਨੂੰ ਨਵੀਂ ਟੈਬ ਵਿੱਚ ਬਦਲੋ</string>
 
-    <!-- Preference for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
-    <string moz:removedIn="97" name="preference_category_safe_browsing">ਸੁਰੱਖਿਅਤ ਬਰਾਊਜ਼ਿੰਗ</string>
     <!-- Preference title for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
     <string name="preference_safe_browsing_title">ਸੰਭਾਵਿਤ ਖ਼ਤਰਨਾਕ ਅਤੇ ਭਰਮਪੂਰਕ ਸਾਈਟਾਂ \'ਤੇ ਪਾਬੰਦੀ ਲਗਾਓ</string>
     <!-- Preference summary for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
@@ -826,8 +880,6 @@ The new line here must be kept as the second half of the string is clickable for
     <string name="preference_https_only_title">ਸਿਰਫ਼-HTTPS ਢੰਗ</string>
 
     <!-- Description of the preference to enable "HTTPS-Only" mode. -->
-    <string moz:removedIn="98" name="preference_https_only_summary2" tools:ignore="UnusedResources">ਵਾਧਾ ਕੀਤੀ ਸੁਰੱਖਿਆ ਲਈ HTTPS ਵਰਤ ਕੇ ਸਾਈਟ ਨਾਲ ਆਪਣੇ-ਆਪ ਕਨੈਕਟ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ। HTTPS ਕਨੈਕਸ਼ਨ ਤੁਹਾਡੇ ਵਲੋਂ ਖੋਲ੍ਹੀਆਂ ਜਾਂਦੀਆਂ ਵੈੱਬਸਾਈਟਾਂ ਲਈ ਸੁਰੱਖਿਅਤ, ਇੰਕ੍ਰਿਪਟ ਕੀਤੇ ਕਨੈਕਸ਼ਨ ਦਿੰਦੇ ਹਨ।</string>
-
     <string name="preference_https_only_summary3">ਵਾਧਾ ਕੀਤੀ ਸੁਰੱਖਿਆ ਲਈ HTTPS ਇੰਕ੍ਰਿਪਸ਼ਨ ਪਰੋਟੋਕਾਲ ਵਰਤ ਕੇ ਸਾਈਟਾਂ ਨਾਲ ਕਨੈਕਟ ਕਰਨ ਦੀ ਆਪਣੇ-ਆਪ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
 
     <!-- Preference for exceptions tracking protection -->
@@ -906,9 +958,9 @@ The new line here must be kept as the second half of the string is clickable for
 
     <!-- Theme Preferences -->
     <!-- Preference category for changing default theme to dark or light mode -->
-    <string name="preferences_theme"></string>
+    <string name="preferences_theme">ਥੀਮ</string>
     <!-- Preference for using light theme -->
-    <string name="preference_light_theme"></string>
+    <string name="preference_light_theme">ਹਲਕਾ</string>
     <!-- Preference for using dark theme -->
     <string name="preference_dark_theme">ਗੂੜ੍ਹਾ</string>
     <!-- Preference for using using dark or light theme automatically set by battery -->

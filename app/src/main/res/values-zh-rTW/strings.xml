@@ -297,8 +297,11 @@
     <string name="preference_security_biometric">使用指紋解鎖程式</string>
     <!-- Preference Summary: Biometrics (iris scan, fingerprint, or facial scan) can be used to unlock Focus if the app had a URL
         open when the app was last run to ensure that only the phone's owner can view a previous session.
-        %1$s will be replaced by the app name (e.g. Firefox Focus) -->
-    <string name="preference_security_biometric_summary">若已在程式中開啟網頁，可使用您的指紋直接解鎖 %1$s。也會開啟秘密行動模式。</string>
+        %s will be replaced by the app name (e.g. Firefox Focus)
+        Shortcuts is a feature that allows the user to pin his favorite websites to Focus home screen so he can quickly access them-->
+    <string moz:removedIn="102" name="preference_security_biometric_summary" tools:ignore="UnusedResources">若已在程式中開啟網頁，可使用您的指紋直接解鎖 %1$s。也會開啟秘密行動模式。</string>
+
+    <string name="preference_security_biometric_summary2">若已用 %s 開啟網站或加入捷徑，可使用指紋直接解鎖。</string>
 
     <!-- Preference Title: Secure Mode is a setting that prevents the app's content to show up in the "recent apps" screen
          and prevents the user from taking screenshots or casting the app to other displays. -->
@@ -509,7 +512,9 @@
     <string name="onboarding_history_title">讓瀏覽紀錄彷彿沒發生過</string>
 
     <!-- Onboarding: History Description -->
-    <string name="onboarding_history_description">只要點一下，即可清除您的上網紀錄與 Cookie，防止廣告四處追蹤。</string>
+    <string moz:removedIn="100" name="onboarding_history_description" tools:ignore="UnusedResources">只要點一下，即可清除您的上網紀錄與 Cookie，防止廣告四處追蹤。</string>
+
+    <string name="onboarding_history_description2">只要點一下，即可清除您的上網紀錄與 Cookie，防止廣告四處追蹤。</string>
 
     <!-- Onboarding: Protection Title -->
     <string name="onboarding_protection_title">符合任何情境的隱私保護機制</string>
@@ -676,6 +681,48 @@
     <!-- Preference for autoplay -->
     <string name="preference_autoplay">自動播放</string>
 
+    <!-- Heading for the instructions to allow a permission -->
+    <string name="phone_feature_blocked_intro">若要允許:</string>
+
+    <!-- First step for the allowing a permission -->
+    <string name="phone_feature_blocked_step_settings">1. 開啟 Android 設定</string>
+
+    <!-- Second step for the allowing a permission -->
+    <string name="phone_feature_blocked_step_permissions"><![CDATA[2. 點擊<b>權限</b>]]></string>
+
+    <!-- Button label that take the user to the Android App setting -->
+    <string name="phone_feature_go_to_settings">開啟設定</string>
+
+    <!-- Third step for allowing a permission. The placeholder will be updated by, for example, "Camera" -->
+    <string name="phone_feature_blocked_step_feature"><![CDATA[3. 開啟<b>%1$s</b>權限]]></string>
+
+    <!-- Preference for altering the camera access for all websites -->
+    <string name="preference_phone_feature_camera">相機</string>
+
+    <!-- Preference for altering the microphone access for all websites -->
+    <string name="preference_phone_feature_microphone">麥克風</string>
+
+    <!-- Preference for altering the location access for all websites -->
+    <string name="preference_phone_feature_location">位置</string>
+
+    <!-- Preference for altering the notification access for all websites -->
+    <string name="preference_phone_feature_notification">通知</string>
+
+    <!-- Preference for altering the EME access for all websites -->
+    <string name="preference_phone_feature_media_key_system_access">由 DRM 控制的內容</string>
+
+    <!-- Label that indicates that a permission must be asked always -->
+    <string name="preference_option_phone_feature_ask_to_allow">總是詢問</string>
+
+    <!-- Label that indicates that a permission must be blocked -->
+    <string name="preference_option_phone_feature_blocked">封鎖</string>
+
+    <!-- Label that indicates that a permission must be allowed -->
+    <string name="preference_option_phone_feature_allowed">允許</string>
+
+    <!--Label that indicates a permission is by the Android OS-->
+    <string name="phone_feature_blocked_by_android">被 Android 封鎖</string>
+
     <!-- Preference for allow autoplay audio and video-->
     <string name="preference_allow_audio_video_autoplay">允許自動播放影音內容</string>
 
@@ -714,14 +761,23 @@
 
     <!-- Title for the fingerprint authentication dialog box that is shown to the user when opening the app.
      %1$s is replaced with the app name -->
-    <string name="biometric_auth_title">解鎖 %1$s</string>
+    <string moz:removedIn="103" name="biometric_auth_title">解鎖 %1$s</string>
+
+    <!-- Text Button for show biometric prompt -->
+    <string name="show_biometric_button_text">解鎖</string>
+
+    <!-- Title text for biometric prompt pop-up -->
+    <string name="biometric_prompt_title">使用您的指紋確認</string>
+
+    <!-- Subtitle text for biometric prompt pop-up -->
+    <string name="biometric_prompt_subtitle">您可以使用指紋來繼續使用應用程式。</string>
 
     <!-- Description for the fingerprint authentication dialog box that is shown to the user when opening the app -->
-    <string name="biometric_auth_description">觸碰指紋感測器以繼續。</string>
+    <string moz:removedIn="103" name="biometric_auth_description">觸碰指紋感測器以繼續。</string>
 
     <!-- New session button for the fingerprint authentication dialog box that is shown to the user when opening the app.
      When pressed, the user's previous session is cleared, and authentication is not required. -->
-    <string name="biometric_auth_new_session">開新使用階段</string>
+    <string moz:removedIn="103" name="biometric_auth_new_session">開新使用階段</string>
 
     <!-- Button for the fingerprint authentication dialog box that is shown to the user when sharing a link to the app
     while the user has biometric authentication enabled. When pressed, the user's previous session is cleared, and the shared link is opened. -->
@@ -824,8 +880,6 @@ The new line here must be kept as the second half of the string is clickable for
     <!-- Preference for switching to a new tab immediately after opening -->
     <string name="preference_open_new_tab">開啟鏈結後，立即切換到該分頁</string>
 
-    <!-- Preference for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
-    <string moz:removedIn="97" name="preference_category_safe_browsing">安全瀏覽</string>
     <!-- Preference title for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
     <string name="preference_safe_browsing_title">封鎖可能危險或詐騙的網站</string>
     <!-- Preference summary for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
@@ -835,8 +889,6 @@ The new line here must be kept as the second half of the string is clickable for
     <string name="preference_https_only_title">純 HTTPS 模式</string>
 
     <!-- Description of the preference to enable "HTTPS-Only" mode. -->
-    <string moz:removedIn="98" name="preference_https_only_summary2" tools:ignore="UnusedResources">自動嘗試使用 HTTPS 連線到網站以增加安全性。HTTPS 可在您與網站之間建立安全、加密過的連線。</string>
-
     <string name="preference_https_only_summary3">自動嘗試使用加密過的 HTTPS 通訊協定連線到網站，以增加安全性。</string>
 
     <!-- Preference for exceptions tracking protection -->

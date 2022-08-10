@@ -298,8 +298,11 @@
     <string name="preference_security_biometric">Vingerafdruk voor ontgrendelen van app gebruiken</string>
     <!-- Preference Summary: Biometrics (iris scan, fingerprint, or facial scan) can be used to unlock Focus if the app had a URL
         open when the app was last run to ensure that only the phone's owner can view a previous session.
-        %1$s will be replaced by the app name (e.g. Firefox Focus) -->
-    <string name="preference_security_biometric_summary">Uw vingerafdruk kan %1$s ontgrendelen als er al een URL in de app is geopend. Stealth wordt ingeschakeld.</string>
+        %s will be replaced by the app name (e.g. Firefox Focus)
+        Shortcuts is a feature that allows the user to pin his favorite websites to Focus home screen so he can quickly access them-->
+    <string moz:removedIn="102" name="preference_security_biometric_summary" tools:ignore="UnusedResources">Uw vingerafdruk kan %1$s ontgrendelen als er al een URL in de app is geopend. Stealth wordt ingeschakeld.</string>
+
+    <string name="preference_security_biometric_summary2">Ontgrendel met vingerafdruk als u snelkoppelingen hebt toegevoegd of als een website al in %s is geopend.</string>
 
     <!-- Preference Title: Secure Mode is a setting that prevents the app's content to show up in the "recent apps" screen
          and prevents the user from taking screenshots or casting the app to other displays. -->
@@ -510,7 +513,9 @@
     <string name="onboarding_history_title">Surf alsof het nooit is gebeurd</string>
 
     <!-- Onboarding: History Description -->
-    <string name="onboarding_history_description">Met één tik worden uw navigatiegeschiedenis en cookies gewist en wordt voorkomen dat advertenties u volgen.</string>
+    <string moz:removedIn="100" name="onboarding_history_description" tools:ignore="UnusedResources">Met één tik worden uw navigatiegeschiedenis en cookies gewist en wordt voorkomen dat advertenties u volgen.</string>
+
+    <string name="onboarding_history_description2">Met één tik worden uw navigatiegeschiedenis en cookies gewist en wordt voorkomen dat advertenties u volgen.</string>
 
     <!-- Onboarding: Protection Title -->
     <string name="onboarding_protection_title">Privacy voor elke situatie</string>
@@ -677,6 +682,48 @@
     <!-- Preference for autoplay -->
     <string name="preference_autoplay">Automatisch afspelen</string>
 
+    <!-- Heading for the instructions to allow a permission -->
+    <string name="phone_feature_blocked_intro">Toestaan:</string>
+
+    <!-- First step for the allowing a permission -->
+    <string name="phone_feature_blocked_step_settings">1. Ga naar Android-instellingen</string>
+
+    <!-- Second step for the allowing a permission -->
+    <string name="phone_feature_blocked_step_permissions"><![CDATA[2. Tik op <b>Machtigingen</b>]]></string>
+
+    <!-- Button label that take the user to the Android App setting -->
+    <string name="phone_feature_go_to_settings">Naar Instellingen</string>
+
+    <!-- Third step for allowing a permission. The placeholder will be updated by, for example, "Camera" -->
+    <string name="phone_feature_blocked_step_feature"><![CDATA[3. Zet <b>%1$s</b> op AAN]]></string>
+
+    <!-- Preference for altering the camera access for all websites -->
+    <string name="preference_phone_feature_camera">Camera</string>
+
+    <!-- Preference for altering the microphone access for all websites -->
+    <string name="preference_phone_feature_microphone">Microfoon</string>
+
+    <!-- Preference for altering the location access for all websites -->
+    <string name="preference_phone_feature_location">Locatie</string>
+
+    <!-- Preference for altering the notification access for all websites -->
+    <string name="preference_phone_feature_notification">Notificatie</string>
+
+    <!-- Preference for altering the EME access for all websites -->
+    <string name="preference_phone_feature_media_key_system_access">DRM-beheerde inhoud</string>
+
+    <!-- Label that indicates that a permission must be asked always -->
+    <string name="preference_option_phone_feature_ask_to_allow">Vragen om toestemming</string>
+
+    <!-- Label that indicates that a permission must be blocked -->
+    <string name="preference_option_phone_feature_blocked">Geblokkeerd</string>
+
+    <!-- Label that indicates that a permission must be allowed -->
+    <string name="preference_option_phone_feature_allowed">Toegestaan</string>
+
+    <!--Label that indicates a permission is by the Android OS-->
+    <string name="phone_feature_blocked_by_android">Geblokkeerd door Android</string>
+
     <!-- Preference for allow autoplay audio and video-->
     <string name="preference_allow_audio_video_autoplay">Audio en video toestaan</string>
 
@@ -715,14 +762,23 @@
 
     <!-- Title for the fingerprint authentication dialog box that is shown to the user when opening the app.
      %1$s is replaced with the app name -->
-    <string name="biometric_auth_title">%1$s ontgrendelen</string>
+    <string moz:removedIn="103" name="biometric_auth_title">%1$s ontgrendelen</string>
+
+    <!-- Text Button for show biometric prompt -->
+    <string name="show_biometric_button_text">Ontgrendelen</string>
+
+    <!-- Title text for biometric prompt pop-up -->
+    <string name="biometric_prompt_title">Bevestig het gebruik van uw vingerafdruk</string>
+
+    <!-- Subtitle text for biometric prompt pop-up -->
+    <string name="biometric_prompt_subtitle">U kunt uw vingerafdruk gebruiken om uw huidige app-sessie voort te zetten.</string>
 
     <!-- Description for the fingerprint authentication dialog box that is shown to the user when opening the app -->
-    <string name="biometric_auth_description">Raak de vingerafdruksensor aan om verder te gaan.</string>
+    <string moz:removedIn="103" name="biometric_auth_description">Raak de vingerafdruksensor aan om verder te gaan.</string>
 
     <!-- New session button for the fingerprint authentication dialog box that is shown to the user when opening the app.
      When pressed, the user's previous session is cleared, and authentication is not required. -->
-    <string name="biometric_auth_new_session">Nieuwe sessie</string>
+    <string moz:removedIn="103" name="biometric_auth_new_session">Nieuwe sessie</string>
 
     <!-- Button for the fingerprint authentication dialog box that is shown to the user when sharing a link to the app
     while the user has biometric authentication enabled. When pressed, the user's previous session is cleared, and the shared link is opened. -->
@@ -818,8 +874,6 @@ The new line here must be kept as the second half of the string is clickable for
     <!-- Preference for switching to a new tab immediately after opening -->
     <string name="preference_open_new_tab">Onmiddellijk naar koppeling in nieuw tabblad wisselen</string>
 
-    <!-- Preference for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
-    <string moz:removedIn="97" name="preference_category_safe_browsing">Safe Browsing</string>
     <!-- Preference title for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
     <string name="preference_safe_browsing_title">Mogelijk gevaarlijke en misleidende websites blokkeren</string>
     <!-- Preference summary for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
@@ -829,8 +883,6 @@ The new line here must be kept as the second half of the string is clickable for
     <string name="preference_https_only_title">Alleen-HTTPS-modus</string>
 
     <!-- Description of the preference to enable "HTTPS-Only" mode. -->
-    <string moz:removedIn="98" name="preference_https_only_summary2" tools:ignore="UnusedResources">Probeert automatisch verbinding te maken met websites via HTTPS voor een betere beveiliging. HTTPS-verbindingen zorgen voor een veilige, versleutelde verbinding met websites die u bezoekt.</string>
-
     <string name="preference_https_only_summary3">Probeert voor een betere beveiliging automatisch middels het HTTPS-versleutelingsprotocol verbinding te maken met websites.</string>
 
     <!-- Preference for exceptions tracking protection -->

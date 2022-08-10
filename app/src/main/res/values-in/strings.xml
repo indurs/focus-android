@@ -297,8 +297,11 @@
     <string name="preference_security_biometric">Gunakan sidik jari untuk membuka aplikasi</string>
     <!-- Preference Summary: Biometrics (iris scan, fingerprint, or facial scan) can be used to unlock Focus if the app had a URL
         open when the app was last run to ensure that only the phone's owner can view a previous session.
-        %1$s will be replaced by the app name (e.g. Firefox Focus) -->
-    <string name="preference_security_biometric_summary">Sidik jari Anda dapat membuka %1$s jika URL sudah dibuka di aplikasi. Mode siluman akan aktif.</string>
+        %s will be replaced by the app name (e.g. Firefox Focus)
+        Shortcuts is a feature that allows the user to pin his favorite websites to Focus home screen so he can quickly access them-->
+    <string moz:removedIn="102" name="preference_security_biometric_summary" tools:ignore="UnusedResources">Sidik jari Anda dapat membuka %1$s jika URL sudah dibuka di aplikasi. Mode siluman akan aktif.</string>
+
+    <string name="preference_security_biometric_summary2">Buka kunci dengan sidik jari jika Anda telah menambahkan Pintasan atau saat situs web sudah dibuka di %s.</string>
 
     <!-- Preference Title: Secure Mode is a setting that prevents the app's content to show up in the "recent apps" screen
          and prevents the user from taking screenshots or casting the app to other displays. -->
@@ -509,7 +512,9 @@
     <string name="onboarding_history_title">Menjelajah seperti ini tidak pernah terjadi</string>
 
     <!-- Onboarding: History Description -->
-    <string name="onboarding_history_description">Satu ketukan menghapus riwayat penelusuran dan kuki Anda — dan menghentikan iklan mengikuti Anda.</string>
+    <string moz:removedIn="100" name="onboarding_history_description" tools:ignore="UnusedResources">Satu ketukan menghapus riwayat penelusuran dan kuki Anda — dan menghentikan iklan mengikuti Anda.</string>
+
+    <string name="onboarding_history_description2">Satu ketukan menghapus riwayat penelusuran dan kuki Anda — dan menghentikan iklan mengikuti Anda.</string>
 
     <!-- Onboarding: Protection Title -->
     <string name="onboarding_protection_title">Privasi yang sesuai dengan situasi apapun</string>
@@ -676,6 +681,48 @@
     <!-- Preference for autoplay -->
     <string name="preference_autoplay">Putar Otomatis</string>
 
+    <!-- Heading for the instructions to allow a permission -->
+    <string name="phone_feature_blocked_intro">Untuk mengizinkannya:</string>
+
+    <!-- First step for the allowing a permission -->
+    <string name="phone_feature_blocked_step_settings">1. Buka Pengaturan Android</string>
+
+    <!-- Second step for the allowing a permission -->
+    <string name="phone_feature_blocked_step_permissions"><![CDATA[2. Ketuk <b>Perizinan</b>]]></string>
+
+    <!-- Button label that take the user to the Android App setting -->
+    <string name="phone_feature_go_to_settings">Buka Pengaturan</string>
+
+    <!-- Third step for allowing a permission. The placeholder will be updated by, for example, "Camera" -->
+    <string name="phone_feature_blocked_step_feature"><![CDATA[3. Aktifkan/Nonaktifkan <b>%1$s</b>]]></string>
+
+    <!-- Preference for altering the camera access for all websites -->
+    <string name="preference_phone_feature_camera">Kamera</string>
+
+    <!-- Preference for altering the microphone access for all websites -->
+    <string name="preference_phone_feature_microphone">Mikrofon</string>
+
+    <!-- Preference for altering the location access for all websites -->
+    <string name="preference_phone_feature_location">Lokasi</string>
+
+    <!-- Preference for altering the notification access for all websites -->
+    <string name="preference_phone_feature_notification">Pemberitahuan</string>
+
+    <!-- Preference for altering the EME access for all websites -->
+    <string name="preference_phone_feature_media_key_system_access">Konten yang diatur DRM</string>
+
+    <!-- Label that indicates that a permission must be asked always -->
+    <string name="preference_option_phone_feature_ask_to_allow">Meminta izin</string>
+
+    <!-- Label that indicates that a permission must be blocked -->
+    <string name="preference_option_phone_feature_blocked">Diblokir</string>
+
+    <!-- Label that indicates that a permission must be allowed -->
+    <string name="preference_option_phone_feature_allowed">Diizinkan</string>
+
+    <!--Label that indicates a permission is by the Android OS-->
+    <string name="phone_feature_blocked_by_android">Diblokir oleh Android</string>
+
     <!-- Preference for allow autoplay audio and video-->
     <string name="preference_allow_audio_video_autoplay">Izinkan suara dan video</string>
 
@@ -714,14 +761,23 @@
 
     <!-- Title for the fingerprint authentication dialog box that is shown to the user when opening the app.
      %1$s is replaced with the app name -->
-    <string name="biometric_auth_title">Buka %1$s</string>
+    <string moz:removedIn="103" name="biometric_auth_title">Buka %1$s</string>
+
+    <!-- Text Button for show biometric prompt -->
+    <string name="show_biometric_button_text">Buka</string>
+
+    <!-- Title text for biometric prompt pop-up -->
+    <string name="biometric_prompt_title">Konfirmasi Menggunakan Sidik Jari Anda</string>
+
+    <!-- Subtitle text for biometric prompt pop-up -->
+    <string name="biometric_prompt_subtitle">Anda dapat menggunakan sidik jari untuk melanjutkan sesi aplikasi Anda saat ini.</string>
 
     <!-- Description for the fingerprint authentication dialog box that is shown to the user when opening the app -->
-    <string name="biometric_auth_description">Sentuh sensor sidik jari untuk melanjutkan.</string>
+    <string moz:removedIn="103" name="biometric_auth_description">Sentuh sensor sidik jari untuk melanjutkan.</string>
 
     <!-- New session button for the fingerprint authentication dialog box that is shown to the user when opening the app.
      When pressed, the user's previous session is cleared, and authentication is not required. -->
-    <string name="biometric_auth_new_session">Sesi Baru</string>
+    <string moz:removedIn="103" name="biometric_auth_new_session">Sesi Baru</string>
 
     <!-- Button for the fingerprint authentication dialog box that is shown to the user when sharing a link to the app
     while the user has biometric authentication enabled. When pressed, the user's previous session is cleared, and the shared link is opened. -->
@@ -817,8 +873,6 @@ The new line here must be kept as the second half of the string is clickable for
     <!-- Preference for switching to a new tab immediately after opening -->
     <string name="preference_open_new_tab">Alihkan tautan langsung ke tab baru</string>
 
-    <!-- Preference for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
-    <string moz:removedIn="97" name="preference_category_safe_browsing">Penjelajahan Aman</string>
     <!-- Preference title for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
     <string name="preference_safe_browsing_title">Blokir situs yang mungkin berbahaya serta penipuan</string>
     <!-- Preference summary for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
@@ -826,9 +880,8 @@ The new line here must be kept as the second half of the string is clickable for
 
     <!-- Title of the preference to enable "HTTPS-Only" mode -->
     <string name="preference_https_only_title">Mode Hanya HTTPS</string>
-    <!-- Description of the preference to enable "HTTPS-Only" mode. -->
-    <string moz:removedIn="98" name="preference_https_only_summary2" tools:ignore="UnusedResources">Secara otomatis mencoba untuk terhubung ke situs menggunakan HTTPS untuk meningkatkan keamanan. Koneksi HTTPS menyediakan koneksi yang aman dan terenkripsi ke situs web yang Anda kunjungi.</string>
 
+    <!-- Description of the preference to enable "HTTPS-Only" mode. -->
     <string name="preference_https_only_summary3">Secara otomatis mencoba terhubung ke situs menggunakan protokol enkripsi HTTPS untuk meningkatkan keamanan.</string>
 
     <!-- Preference for exceptions tracking protection -->

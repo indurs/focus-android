@@ -296,9 +296,12 @@
     <string name="preference_security_biometric">Use fingerprint to unlock app</string>
     <!-- Preference Summary: Biometrics (iris scan, fingerprint, or facial scan) can be used to unlock Focus if the app had a URL
         open when the app was last run to ensure that only the phone's owner can view a previous session.
-        %1$s will be replaced by the app name (e.g. Firefox Focus) -->
-    <string name="preference_security_biometric_summary">Your fingerprint can unlock %1$s if a URL is already opened in the app.
+        %s will be replaced by the app name (e.g. Firefox Focus)
+        Shortcuts is a feature that allows the user to pin his favorite websites to Focus home screen so he can quickly access them-->
+    <string moz:removedIn="102" name="preference_security_biometric_summary" tools:ignore="UnusedResources">Your fingerprint can unlock %1$s if a URL is already opened in the app.
     Stealth will be turned on.</string>
+
+    <string name="preference_security_biometric_summary2">Unlock using fingerprint if you’ve added Shortcuts or when a web site is already open in %s.</string>
 
     <!-- Preference Title: Secure Mode is a setting that prevents the app's content to show up in the "recent apps" screen
          and prevents the user from taking screenshots or casting the app to other displays. -->
@@ -482,7 +485,9 @@
     <string name="onboarding_history_title">Browse like it never happened</string>
 
     <!-- Onboarding: History Description -->
-    <string name="onboarding_history_description">One tap erases your browsing history and cookies — and stops ads from following your around.</string>
+    <string moz:removedIn="100" name="onboarding_history_description" tools:ignore="UnusedResources">One tap erases your browsing history and cookies — and stops ads from following your around.</string>
+
+    <string name="onboarding_history_description2">One tap erases your browsing history and cookies — and stops ads from following you around.</string>
 
     <!-- Onboarding: Protection Title -->
     <string name="onboarding_protection_title">Privacy that fits any situation</string>
@@ -643,6 +648,48 @@
     <!-- Preference for autoplay -->
     <string name="preference_autoplay">Autoplay</string>
 
+    <!-- Heading for the instructions to allow a permission -->
+    <string name="phone_feature_blocked_intro">To allow it:</string>
+
+    <!-- First step for the allowing a permission -->
+    <string name="phone_feature_blocked_step_settings">1. Go to Android Settings</string>
+
+    <!-- Second step for the allowing a permission -->
+    <string name="phone_feature_blocked_step_permissions"><![CDATA[2. Tap <b>Permissions</b>]]></string>
+
+    <!-- Button label that take the user to the Android App setting -->
+    <string name="phone_feature_go_to_settings">Go to Settings</string>
+
+    <!-- Third step for allowing a permission. The placeholder will be updated by, for example, "Camera" -->
+    <string name="phone_feature_blocked_step_feature"><![CDATA[3. Toggle <b>%1$s</b> to ON]]></string>
+
+    <!-- Preference for altering the camera access for all websites -->
+    <string name="preference_phone_feature_camera">Camera</string>
+
+    <!-- Preference for altering the microphone access for all websites -->
+    <string name="preference_phone_feature_microphone">Microphone</string>
+
+    <!-- Preference for altering the location access for all websites -->
+    <string name="preference_phone_feature_location">Location</string>
+
+    <!-- Preference for altering the notification access for all websites -->
+    <string name="preference_phone_feature_notification">Notification</string>
+
+    <!-- Preference for altering the EME access for all websites -->
+    <string name="preference_phone_feature_media_key_system_access">DRM-controlled content</string>
+
+    <!-- Label that indicates that a permission must be asked always -->
+    <string name="preference_option_phone_feature_ask_to_allow">Ask to allow</string>
+
+    <!-- Label that indicates that a permission must be blocked -->
+    <string name="preference_option_phone_feature_blocked">Blocked</string>
+
+    <!-- Label that indicates that a permission must be allowed -->
+    <string name="preference_option_phone_feature_allowed">Allowed</string>
+
+    <!--Label that indicates a permission is by the Android OS-->
+    <string name="phone_feature_blocked_by_android">Blocked by Android</string>
+
     <!-- Preference for allow autoplay audio and video-->
     <string name="preference_allow_audio_video_autoplay">Allow audio and video</string>
 
@@ -681,14 +728,23 @@
 
     <!-- Title for the fingerprint authentication dialog box that is shown to the user when opening the app.
      %1$s is replaced with the app name -->
-    <string name="biometric_auth_title">Unlock %1$s</string>
+    <string moz:removedIn="103" name="biometric_auth_title">Unlock %1$s</string>
+
+    <!-- Text Button for show biometric prompt -->
+    <string name="show_biometric_button_text">Unlock</string>
+
+    <!-- Title text for biometric prompt pop-up -->
+    <string name="biometric_prompt_title">Confirm Using Your Fingerprint</string>
+
+    <!-- Subtitle text for biometric prompt pop-up -->
+    <string name="biometric_prompt_subtitle">You can use your fingerprint to continue your current app session.</string>
 
     <!-- Description for the fingerprint authentication dialog box that is shown to the user when opening the app -->
-    <string name="biometric_auth_description">Touch the fingerprint sensor to continue.</string>
+    <string moz:removedIn="103" name="biometric_auth_description">Touch the fingerprint sensor to continue.</string>
 
     <!-- New session button for the fingerprint authentication dialog box that is shown to the user when opening the app.
      When pressed, the user's previous session is cleared, and authentication is not required. -->
-    <string name="biometric_auth_new_session">New Session</string>
+    <string moz:removedIn="103" name="biometric_auth_new_session">New Session</string>
 
     <!-- Button for the fingerprint authentication dialog box that is shown to the user when sharing a link to the app
     while the user has biometric authentication enabled. When pressed, the user's previous session is cleared, and the shared link is opened. -->
@@ -791,8 +847,6 @@ The new line here must be kept as the second half of the string is clickable for
     <!-- Preference for switching to a new tab immediately after opening -->
     <string name="preference_open_new_tab">Switch to link in new tab immediately</string>
 
-    <!-- Preference for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
-    <string moz:removedIn="97" name="preference_category_safe_browsing">Safe Browsing</string>
     <!-- Preference title for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
     <string name="preference_safe_browsing_title">Block potentially dangerous and deceptive sites</string>
     <!-- Preference summary for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
@@ -802,8 +856,6 @@ The new line here must be kept as the second half of the string is clickable for
     <string name="preference_https_only_title">HTTPS-Only Mode</string>
 
     <!-- Description of the preference to enable "HTTPS-Only" mode. -->
-    <string moz:removedIn="98" name="preference_https_only_summary2" tools:ignore="UnusedResources">Automatically attempts to connect to sites using HTTPS for increased security. HTTPS connections provide a secure, encrypted connection to web sites you visit.</string>
-
     <string name="preference_https_only_summary3">Automatically attempts to connect to sites using the HTTPS encryption protocol for increased security.</string>
 
     <!-- Preference for exceptions tracking protection -->
